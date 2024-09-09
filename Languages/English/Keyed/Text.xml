@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <BmuS.ManuallyInfo>Manually from workstation, </BmuS.ManuallyInfo>
+  <BmuS.AutomaticInfo>Automatically, </BmuS.AutomaticInfo>
+  <BmuS.Automatic>Automatic</BmuS.Automatic>
+  <BmuS.Manual>Manual</BmuS.Manual>
+  <BmuS.AutoOutbound>Auto outbound</BmuS.AutoOutbound>
+  <BmuS.QualityMatters>Quality matters</BmuS.QualityMatters>
+  <BmuS.Registry>Registry</BmuS.Registry>
+  <BmuS.RegistryEmpty>Registry is empty</BmuS.RegistryEmpty>
+  <BmuS.RegistryFull>Registry is full</BmuS.RegistryFull>
+  <BmuS.BuildInRange>Build a {0} in its range.</BmuS.BuildInRange>
+  <BmuS.NoAdditional>No additional {0} will be managed by this {1}. Its registry is full.</BmuS.NoAdditional>
+  <BmuS.ListTeleporter>Lists {0} teleporter</BmuS.ListTeleporter>
+  <BmuS.ListTeleporters>Lists {0} teleporters</BmuS.ListTeleporters>
+  <BmuS.CloseSpot>Close spot is empty, while you order to send something away</BmuS.CloseSpot>
+  <BmuS.AwaySpot>Far away spot is empty, while you order to bring something back</BmuS.AwaySpot>
+  <BmuS.OneOfTwo>One of the two spots is empty</BmuS.OneOfTwo>
+  <BmuS.NothingToTeleport>Nothing to teleport</BmuS.NothingToTeleport>
+  <BmuS.BrowseRecords>Browse {0} records</BmuS.BrowseRecords>
+  <BmuS.RegistryTitle>| Workstation registry |</BmuS.RegistryTitle>
+  <BmuS.Records>{0} records.</BmuS.Records>
+  <BmuS.Empty>Empty.</BmuS.Empty>
+  <BmuS.OrphanSpot>Orphan spot!</BmuS.OrphanSpot>
+  <BmuS.Tip>Tip</BmuS.Tip>
+  <BmuS.Tips>Tips</BmuS.Tips>
+  <BmuS.BuildaInRange>- Build a {0} in the {1} range.</BmuS.BuildaInRange>
+  <BmuS.SelectColonist>- Select a colonist, then right click the orphan {0} to link it to a {1}.</BmuS.SelectColonist>
+  <BmuS.QualityLog>Registry capacity: {0}
+Range: {1}
+Assist range: {2}</BmuS.QualityLog>
+  <BmuS.EmptyRegistry>Empty registry.</BmuS.EmptyRegistry>
+  <BmuS.CheckRegistryRecord>Check registry({0} record).</BmuS.CheckRegistryRecord>
+  <BmuS.CheckRegistryRecords>Check registry({0} records).</BmuS.CheckRegistryRecords>
+  <BmuS.Roger>Roger;</BmuS.Roger>
+  <BmuS.SayWhat>Say what?</BmuS.SayWhat>
+  <BmuS.Nothing>Nothing</BmuS.Nothing>
+  <BmuS.ItemKg>{0} item; {1}kg</BmuS.ItemKg>
+  <BmuS.ItemsKg>{0} items; {1}kg</BmuS.ItemsKg>
+  <BmuS.WarmUp>WarmUp: {0} - {1}</BmuS.WarmUp>
+  <BmuS.NoPower> No power;</BmuS.NoPower>
+  <BmuS.NoFacility> No facility;</BmuS.NoFacility>
+  <BmuS.NoPoweredFacility> No powered facility;</BmuS.NoPoweredFacility>
+  <BmuS.CooldownPercent> Cooldown {0} - {1};</BmuS.CooldownPercent>
+  <BmuS.LinkedCooldownPercent> Linked spot cooldown {0} - {1};</BmuS.LinkedCooldownPercent>
+  <BmuS.Orphan> Orphan.</BmuS.Orphan>
+  <BmuS.NotAValidSpot>{0} is not a valid tp spot, it's a {1}</BmuS.NotAValidSpot>
+  <BmuS.Power>Power: {0}; </BmuS.Power>
+  <BmuS.Facility>Facility: {0}; </BmuS.Facility>
+  <BmuS.Found>Found: </BmuS.Found>
+  <BmuS.FacilityPower>FacilityPower: {0}</BmuS.FacilityPower>
+  <BmuS.BelongsTo>Belongs to </BmuS.BelongsTo>
+  <BmuS.Chillin> Chillin;</BmuS.Chillin>
+  <BmuS.Overweight> overweight;</BmuS.Overweight>
+  <BmuS.NothingToDo> nothing to do;</BmuS.NothingToDo>
+  <BmuS.ReadyToTp>ready to tp N:{0}:{1}</BmuS.ReadyToTp>
+  <BmuS.Unlink>Unlink</BmuS.Unlink>
+  <BmuS.UnlinkTT>Right click with a colonist to link to another tp spot.</BmuS.UnlinkTT>
+  <BmuS.UnlinkTTExpanded>Linked with {0}
+{1} {2} {3}
+Click to unlink.</BmuS.UnlinkTTExpanded>
+  <BmuS.Browse>browse ways</BmuS.Browse>
+  <BmuS.Current>Current : {0}</BmuS.Current>
+  <BmuS.ClickToChange>Click to change to {0}</BmuS.ClickToChange>
+  <BmuS.SetAutomatic>set automatic</BmuS.SetAutomatic>
+  <BmuS.OnePowered>At least one of the two spots must be powered.</BmuS.OnePowered>
+  <BmuS.CannotTargetItself>{0} can not target itself</BmuS.CannotTargetItself>
+  <BmuS.OutOfRange>{0} is out of range (distance : {1}, max : {2})</BmuS.OutOfRange>
+  <BmuS.WasWasntLinked>{0} {1}{2} was {3}linked to {4}{5}</BmuS.WasWasntLinked>
+  <BmuS.Not>not </BmuS.Not>
+  <BmuS.LinkedSpot>(Linked spot)</BmuS.LinkedSpot>
+  <BmuS.PowerRequired>Power required{0}</BmuS.PowerRequired>
+  <BmuS.FacilityRequired>Facility required{0}</BmuS.FacilityRequired>
+  <BmuS.FacilityPowerRequired>Powered facility required{0}</BmuS.FacilityPowerRequired>
+  <BmuS.ExcessWeight>Excess weight detected{0}</BmuS.ExcessWeight>
+  <BmuS.Cooldown>Undergoing cooldown{0}</BmuS.Cooldown>
+  <BmuS.OrphanSpotIs>Orphan spot{0}</BmuS.OrphanSpotIs>
+  <BmuS.ShouldNotHappen>This should not happen{0}</BmuS.ShouldNotHappen>
+</LanguageData>
