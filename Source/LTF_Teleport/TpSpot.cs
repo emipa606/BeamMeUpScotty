@@ -6,7 +6,7 @@ namespace LTF_Teleport;
 
 public class TpSpot : IExposable
 {
-    public readonly Statistics baseStats = new Statistics();
+    public readonly Statistics baseStats = new();
 
     public CompAffectedByFacilities compAffectedByFacilities;
 
@@ -14,7 +14,7 @@ public class TpSpot : IExposable
 
     public CompPowerTrader compPowerFacility;
 
-    public CompPowerTrader compPowerTrader;
+    private CompPowerTrader compPowerTrader;
     public CompQuality compQuality;
 
     public Comp_LTF_TpSpot compTwin;
@@ -33,9 +33,9 @@ public class TpSpot : IExposable
 
     private float twinDistance;
 
-    public WorkValues values = new WorkValues();
+    public WorkValues values = new();
 
-    public Parameters wParams = new Parameters();
+    public Parameters wParams = new();
 
     private Parameters TwinParams => compTwin?.tpSpot?.wParams;
 
@@ -52,7 +52,7 @@ public class TpSpot : IExposable
 
     public bool HasQuality => compQuality != null;
 
-    public bool HasPowerTrader => compPowerTrader != null;
+    private bool HasPowerTrader => compPowerTrader != null;
 
     public bool HasPower => HasPowerTrader && compPowerTrader.PowerOn;
 
@@ -77,7 +77,7 @@ public class TpSpot : IExposable
 
     public string CooldownString => Tools.TimeLeftString((int)values.currentCooldown, (int)baseStats.cooldownBase);
 
-    public float TwinBestRange =>
+    private float TwinBestRange =>
         IsOrphan ? baseStats.range : Mathf.Max(baseStats.range, compTwin.tpSpot.baseStats.range);
 
     public bool HasRegisteredFacility => facility != null && compFacility != null;
@@ -145,26 +145,12 @@ public class TpSpot : IExposable
             : string.Empty;
     }
 
-    public bool IsAffectedByFacilities()
-    {
-        return compAffectedByFacilities != null;
-    }
-
     public string QualityLog()
     {
         var empty = $"Warmup: {Tools.Ticks2Str(values.warmUpCalculated)}";
         empty = $"{empty} - Cooldown: {Tools.Ticks2Str(baseStats.cooldownBase)}";
         empty = $"{empty}\nRange: {(int)baseStats.range}";
         return $"{empty} - Weight max: {baseStats.weightCapacity}kg";
-    }
-
-    public void AutoToggle()
-    {
-        wParams.automaticTeleportation = !wParams.automaticTeleportation;
-        if (IsLinked)
-        {
-            TwinParams.automaticTeleportation = wParams.automaticTeleportation;
-        }
     }
 
     public void Browse(bool myDebug = false)
@@ -287,14 +273,6 @@ public class TpSpot : IExposable
         values.currentCooldown = value;
     }
 
-    private void SetCooldown()
-    {
-        values.currentCooldown = baseStats.cooldownBase * (0.5f + (0.5f *
-                                                                   ((0.3f * values.currentWeight /
-                                                                     baseStats.weightCapacity) +
-                                                                    (0.7f * values.orderRange / TwinBestRange))));
-    }
-
     private void CalculateWarmUp()
     {
         if (IsLinked)
@@ -378,16 +356,11 @@ public class TpSpot : IExposable
         }
     }
 
-    public void FacilityDependantCapacities(Comp_LTF_TpSpot compSpot, bool debug = false)
+    private void FacilityDependantCapacities(Comp_LTF_TpSpot compSpot, bool debug = false)
     {
         baseStats.SetBenchSynergy(compSpot);
         baseStats.SetRange(compSpot, compQuality);
         baseStats.SetCooldownBase(compSpot, compQuality);
-    }
-
-    public bool AreYouMyRegisteredFacility(Building daddy)
-    {
-        return daddy == facility;
     }
 
     public void TwinWorstFacilityQuality(bool requiresFacility)

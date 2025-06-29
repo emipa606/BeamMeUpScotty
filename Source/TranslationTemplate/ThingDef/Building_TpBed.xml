@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: teleportation bed -->
+  <LTF_TpBed.label>teleportation bed</LTF_TpBed.label>
+  <!-- EN: A structure made to teleport incapacitated humans. Must be associated with a teleport spot. -->
+  <LTF_TpBed.description>A structure made to teleport incapacitated humans. Must be associated with a teleport spot.</LTF_TpBed.description>
+  <!-- EN: Link -->
+  <LTF_TpBed.comps.CompUsable.useLabel>Link</LTF_TpBed.comps.CompUsable.useLabel>
+</LanguageData>

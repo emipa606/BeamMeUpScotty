@@ -10,11 +10,11 @@ public static class MyDefs
 
     public static readonly ThingDef tpCatcherDef = ThingDef.Named("LTF_TpCatcher");
 
-    public static readonly ThingDef miniStationDef = ThingDef.Named("LTF_MiniStation");
+    private static readonly ThingDef miniStationDef = ThingDef.Named("LTF_MiniStation");
 
-    public static readonly ThingDef tpBedDef = ThingDef.Named("LTF_TpBed");
+    private static readonly ThingDef tpBedDef = ThingDef.Named("LTF_TpBed");
 
-    public static readonly ThingDef tpBoxDef = ThingDef.Named("LTF_TpBox");
+    private static readonly ThingDef tpBoxDef = ThingDef.Named("LTF_TpBox");
 
     public static bool UnpoweredTp(this Thing tpThing)
     {

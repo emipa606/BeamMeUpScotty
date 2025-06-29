@@ -7,11 +7,11 @@ namespace LTF_Teleport;
 [StaticConstructorOnStartup]
 public class CompMatrixOverlay : ThingComp
 {
-    public static readonly Graphic AnimationGraphic =
+    private static readonly Graphic AnimationGraphic =
         GraphicDatabase.Get<Graphic_MatrixOverlay>("AnimationOverlay/matrix", ShaderDatabase.TransparentPostLight,
             Vector2.one, Color.white);
 
-    protected CompPowerTrader powerComp;
+    private CompPowerTrader powerComp;
 
     public CompProperties_MatrixOverlay Props => (CompProperties_MatrixOverlay)props;
 

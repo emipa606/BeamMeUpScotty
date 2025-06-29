@@ -59,87 +59,90 @@ public static class BenchGizmos
 
     public static Gizmo ManualCast(this Comp_LTF_TpBench bComp)
     {
-        var comp_LTF_TpSpot = bComp.CurrentSpot?.TryGetComp<Comp_LTF_TpSpot>();
-        if (comp_LTF_TpSpot == null)
+        var compLtfTpSpot = bComp.CurrentSpot?.TryGetComp<Comp_LTF_TpSpot>();
+        if (compLtfTpSpot == null)
         {
             Log.Warning("Comp_LTF_TpSpot null in ChangeWay - should not be this way");
             return null;
         }
 
-        if (comp_LTF_TpSpot.WParams.myWay.InvalidWay())
+        if (compLtfTpSpot.WParams.myWay.InvalidWay())
         {
             Log.Warning("invalid way in ChangeWay - should not be this way");
             return null;
         }
 
-        var text = comp_LTF_TpSpot.WParams.myWay.WayNaming();
+        var text = compLtfTpSpot.WParams.myWay.WayNaming();
         Texture2D icon;
-        var hasNoIssue = comp_LTF_TpSpot.HasNoIssue();
-        var isOrphan = comp_LTF_TpSpot.IsOrphan() || comp_LTF_TpSpot.TwinComp.HasNoIssue();
+        var hasNoIssue = compLtfTpSpot.HasNoIssue();
+        var isOrphan = compLtfTpSpot.IsOrphan() || compLtfTpSpot.TwinComp.HasNoIssue();
         string defaultDesc;
         string description;
         Action @object = delegate { Tools.Warn("rip action on no way", Prefs.DevMode); };
-        if (hasNoIssue && isOrphan)
+        switch (hasNoIssue)
         {
-            icon = comp_LTF_TpSpot.WParams.myWay.WayGizmoing();
-            description = $"Cast {text}";
-            defaultDesc = comp_LTF_TpSpot.WParams.myWay.WayDescription(comp_LTF_TpSpot.tpSpot.AutoLabeling(),
-                bComp.buildingName, comp_LTF_TpSpot.IsLinked());
-            var noItems = false;
-            if (comp_LTF_TpSpot.WParams.myWay.IsOut())
+            case true when isOrphan:
             {
-                if (!comp_LTF_TpSpot.HasItems())
+                icon = compLtfTpSpot.WParams.myWay.WayGizmoing();
+                description = $"Cast {text}";
+                defaultDesc = compLtfTpSpot.WParams.myWay.WayDescription(compLtfTpSpot.tpSpot.AutoLabeling(),
+                    bComp.buildingName, compLtfTpSpot.IsLinked());
+                var noItems = false;
+                if (compLtfTpSpot.WParams.myWay.IsOut())
                 {
-                    noItems = true;
-                    defaultDesc = "BmuS.CloseSpot".Translate();
-                    icon = MyGizmo.IssueEmptyGz;
+                    if (!compLtfTpSpot.HasItems())
+                    {
+                        noItems = true;
+                        defaultDesc = "BmuS.CloseSpot".Translate();
+                        icon = MyGizmo.IssueEmptyGz;
+                    }
+                    else
+                    {
+                        @object = compLtfTpSpot.OrderOut;
+                    }
                 }
-                else
+                else if (compLtfTpSpot.WParams.myWay.IsIn())
                 {
-                    @object = comp_LTF_TpSpot.OrderOut;
+                    if (!compLtfTpSpot.TwinComp.HasItems())
+                    {
+                        noItems = true;
+                        defaultDesc = "BmuS.AwaySpot".Translate();
+                        icon = MyGizmo.IssueEmptyTwinGz;
+                    }
+                    else
+                    {
+                        @object = compLtfTpSpot.OrderIn;
+                    }
                 }
-            }
-            else if (comp_LTF_TpSpot.WParams.myWay.IsIn())
-            {
-                if (!comp_LTF_TpSpot.TwinComp.HasItems())
+                else if (compLtfTpSpot.WParams.myWay.IsSwap())
                 {
-                    noItems = true;
-                    defaultDesc = "BmuS.AwaySpot".Translate();
-                    icon = MyGizmo.IssueEmptyTwinGz;
+                    if (!compLtfTpSpot.HasItems() || !compLtfTpSpot.TwinComp.HasItems())
+                    {
+                        noItems = true;
+                        defaultDesc = "BmuS.OneOfTwo".Translate();
+                        icon = MyGizmo.IssueEmptyGz;
+                    }
+                    else
+                    {
+                        @object = compLtfTpSpot.OrderSwap;
+                    }
                 }
-                else
-                {
-                    @object = comp_LTF_TpSpot.OrderIn;
-                }
-            }
-            else if (comp_LTF_TpSpot.WParams.myWay.IsSwap())
-            {
-                if (!comp_LTF_TpSpot.HasItems() || !comp_LTF_TpSpot.TwinComp.HasItems())
-                {
-                    noItems = true;
-                    defaultDesc = "BmuS.OneOfTwo".Translate();
-                    icon = MyGizmo.IssueEmptyGz;
-                }
-                else
-                {
-                    @object = comp_LTF_TpSpot.OrderSwap;
-                }
-            }
 
-            if (noItems)
-            {
-                description = "BmuS.NothingToTeleport".Translate();
+                if (noItems)
+                {
+                    description = "BmuS.NothingToTeleport".Translate();
+                }
+
+                break;
             }
-        }
-        else if (!hasNoIssue)
-        {
-            icon = comp_LTF_TpSpot.IssueGizmoing(out description);
-            defaultDesc = comp_LTF_TpSpot.StatusLog;
-        }
-        else
-        {
-            icon = comp_LTF_TpSpot.TwinComp.IssueGizmoing(out description, true);
-            defaultDesc = comp_LTF_TpSpot.TwinComp.StatusLog;
+            case false:
+                icon = compLtfTpSpot.IssueGizmoing(out description);
+                defaultDesc = compLtfTpSpot.StatusLog;
+                break;
+            default:
+                icon = compLtfTpSpot.TwinComp.IssueGizmoing(out description, true);
+                defaultDesc = compLtfTpSpot.TwinComp.StatusLog;
+                break;
         }
 
         return new Command_Action

@@ -54,19 +54,19 @@ public class MyGizmo
 
     public static readonly Texture2D OrphanGz = ContentFinder<Texture2D>.Get($"{SpotPath}LinkOff");
 
-    public static readonly Texture2D WayNoGz = ContentFinder<Texture2D>.Get($"{SpotPath}WayNo");
+    private static readonly Texture2D WayNoGz = ContentFinder<Texture2D>.Get($"{SpotPath}WayNo");
 
-    public static readonly Texture2D WayInGz = ContentFinder<Texture2D>.Get($"{SpotPath}WayIn");
+    private static readonly Texture2D WayInGz = ContentFinder<Texture2D>.Get($"{SpotPath}WayIn");
 
-    public static readonly Texture2D WayOutGz = ContentFinder<Texture2D>.Get($"{SpotPath}WayOut");
+    private static readonly Texture2D WayOutGz = ContentFinder<Texture2D>.Get($"{SpotPath}WayOut");
 
-    public static readonly Texture2D WaySwapGz = ContentFinder<Texture2D>.Get($"{SpotPath}WaySwap");
+    private static readonly Texture2D WaySwapGz = ContentFinder<Texture2D>.Get($"{SpotPath}WaySwap");
 
-    public static readonly Texture2D TpLogGz = ContentFinder<Texture2D>.Get($"{BenchPath}RegistryLog");
+    private static readonly Texture2D TpLogGz = ContentFinder<Texture2D>.Get($"{BenchPath}RegistryLog");
 
-    public static readonly Texture2D EmptyRegistryGz = ContentFinder<Texture2D>.Get($"{BenchPath}RegistryEmpty");
+    private static readonly Texture2D EmptyRegistryGz = ContentFinder<Texture2D>.Get($"{BenchPath}RegistryEmpty");
 
-    public static readonly Texture2D FullRegistryGz = ContentFinder<Texture2D>.Get($"{BenchPath}RegistryFull");
+    private static readonly Texture2D FullRegistryGz = ContentFinder<Texture2D>.Get($"{BenchPath}RegistryFull");
 
     public static readonly Texture2D NextTpGz = ContentFinder<Texture2D>.Get($"{BenchPath}NextTp");
 

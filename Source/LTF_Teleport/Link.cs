@@ -17,7 +17,7 @@ public static class Link
         return (int)val >= num && (int)val <= num2;
     }
 
-    public static LinkOptions NextLink(this LinkOptions link)
+    private static LinkOptions NextLink(this LinkOptions link)
     {
         return link != LinkOptions.Linked ? LinkOptions.Linked : LinkOptions.Orphan;
     }

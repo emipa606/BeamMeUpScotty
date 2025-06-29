@@ -21,12 +21,12 @@ public class Comp_LTF_TpBench : ThingComp
 
     public float moreRange;
 
-    public float range;
+    private float range;
 
     public List<Building> Registry = [];
     public string TpSpotName = string.Empty;
 
-    public Building building => (Building)parent;
+    private Building building => (Building)parent;
 
     private Vector3 buildingPos => building.DrawPos;
 
@@ -38,19 +38,19 @@ public class Comp_LTF_TpBench : ThingComp
 
     private CompFacility compFacility => building?.TryGetComp<CompFacility>();
 
-    public CompProperties_LTF_TpBench Props => (CompProperties_LTF_TpBench)props;
+    private CompProperties_LTF_TpBench Props => (CompProperties_LTF_TpBench)props;
 
-    public bool MoreThanOne => HasSpot && Registry.Count > 1;
+    private bool MoreThanOne => HasSpot && Registry.Count > 1;
 
     public bool IsFull => HasSpot && Registry.Count >= FacilityCapacity;
 
     public bool IsEmpty => Registry.NullOrEmpty();
 
-    public bool HasSpot => !IsEmpty;
+    private bool HasSpot => !IsEmpty;
 
     public Building CurrentSpot => GizmoIndex >= Registry.Count ? null : Registry[GizmoIndex];
 
-    public bool GotThePower => compPower is { PowerOn: true };
+    private bool GotThePower => compPower is { PowerOn: true };
 
     public bool HasQuality => compQuality != null;
 
@@ -58,11 +58,11 @@ public class Comp_LTF_TpBench : ThingComp
     {
         TpSpotName = Tools.LabelByDefName("LTF_TpSpot", prcDebug);
         range = compFacility?.Props.maxDistance ?? 0f;
-        SetMoreRange();
-        WeightFacilityCapacity(compQuality);
+        setMoreRange();
+        weightFacilityCapacity(compQuality);
     }
 
-    private void SetMoreRange(CompQuality comp = null)
+    private void setMoreRange(CompQuality comp = null)
     {
         if (comp != null || (comp = compQuality) != null)
         {
@@ -94,7 +94,7 @@ public class Comp_LTF_TpBench : ThingComp
         IndexCorrecter();
     }
 
-    public void IndexCorrecter()
+    private void IndexCorrecter()
     {
         GizmoIndex = Tools.LimitToRange(GizmoIndex, 0, Registry.Count - 1);
     }
@@ -112,7 +112,7 @@ public class Comp_LTF_TpBench : ThingComp
         }
     }
 
-    private void WeightFacilityCapacity(CompQuality comp, bool debug = false)
+    private void weightFacilityCapacity(CompQuality comp, bool debug = false)
     {
         if (debug)
         {
@@ -152,11 +152,11 @@ public class Comp_LTF_TpBench : ThingComp
             foreach (var item in Registry)
             {
                 var empty2 = $"{num2:D2}. {item.LabelShort}{Tools.PosStr(item.Position)}";
-                var comp_LTF_TpSpot = item.TryGetComp<Comp_LTF_TpSpot>();
-                if (comp_LTF_TpSpot != null && comp_LTF_TpSpot.IsLinked())
+                var compLtfTpSpot = item.TryGetComp<Comp_LTF_TpSpot>();
+                if (compLtfTpSpot != null && compLtfTpSpot.IsLinked())
                 {
-                    empty2 = $"{empty2} {comp_LTF_TpSpot.WParams.myWay.WayArrowLabeling()} ";
-                    empty2 = empty2 + comp_LTF_TpSpot.Twin.Label + Tools.PosStr(comp_LTF_TpSpot.Twin.Position);
+                    empty2 = $"{empty2} {compLtfTpSpot.WParams.myWay.WayArrowLabeling()} ";
+                    empty2 = empty2 + compLtfTpSpot.Twin.Label + Tools.PosStr(compLtfTpSpot.Twin.Position);
                 }
                 else
                 {
@@ -190,24 +190,14 @@ public class Comp_LTF_TpBench : ThingComp
         Find.WindowStack.Add(window);
     }
 
-    private void ChangeQuality(bool better = true)
+    private void changeQuality(bool better = true)
     {
         if (!ToolsQuality.ChangeQuality(building, compQuality, better))
         {
             return;
         }
 
-        WeightFacilityCapacity(compQuality);
-    }
-
-    private void BetterQuality()
-    {
-        ChangeQuality();
-    }
-
-    private void WorseQuality()
-    {
-        ChangeQuality(false);
+        weightFacilityCapacity(compQuality);
     }
 
     public string QualityLog()
@@ -215,15 +205,15 @@ public class Comp_LTF_TpBench : ThingComp
         return "BmuS.QualityLog".Translate(FacilityCapacity, range, moreRange);
     }
 
-    private float Bench2SpotDistance(Building spot)
+    private float bench2SpotDistance(Building spot)
     {
         var result = 999f;
         return !ToolsBuilding.CheckBuilding(spot) ? result : building.Position.DistanceTo(spot.Position);
     }
 
-    private bool InRangeSpot(Building spot)
+    private bool inRangeSpot(Building spot)
     {
-        return Bench2SpotDistance(spot) < range;
+        return bench2SpotDistance(spot) < range;
     }
 
     public override void CompTick()
@@ -240,13 +230,13 @@ public class Comp_LTF_TpBench : ThingComp
             {
                 var target = Registry[num];
                 if (ToolsBuilding.CheckBuilding(target) && ToolsBuilding.CheckPower(target) &&
-                    InRangeSpot(target))
+                    inRangeSpot(target))
                 {
                     continue;
                 }
 
-                var comp_LTF_TpSpot = target?.TryGetComp<Comp_LTF_TpSpot>();
-                comp_LTF_TpSpot?.tpSpot.ResetFacility(comp_LTF_TpSpot);
+                var compLtfTpSpot = target?.TryGetComp<Comp_LTF_TpSpot>();
+                compLtfTpSpot?.tpSpot.ResetFacility(compLtfTpSpot);
                 RemoveSpot(target);
             }
         }
@@ -317,8 +307,8 @@ public class Comp_LTF_TpBench : ThingComp
             return;
         }
 
-        var comp_LTF_TpSpot = CurrentSpot?.TryGetComp<Comp_LTF_TpSpot>();
-        if (comp_LTF_TpSpot == null)
+        var compLtfTpSpot = CurrentSpot?.TryGetComp<Comp_LTF_TpSpot>();
+        if (compLtfTpSpot == null)
         {
             return;
         }
@@ -328,8 +318,8 @@ public class Comp_LTF_TpBench : ThingComp
             Log.Warning("PostDrawExtraSelectionOverlays - found comp");
         }
 
-        if (comp_LTF_TpSpot.Props.requiresPower && !comp_LTF_TpSpot.HasPower() ||
-            comp_LTF_TpSpot.Props.requiresFacility && !comp_LTF_TpSpot.HasPoweredFacility())
+        if (compLtfTpSpot.Props.requiresPower && !compLtfTpSpot.HasPower() ||
+            compLtfTpSpot.Props.requiresFacility && !compLtfTpSpot.HasPoweredFacility())
         {
             return;
         }
@@ -340,13 +330,13 @@ public class Comp_LTF_TpBench : ThingComp
         }
 
         GenDraw.DrawLineBetween(parent.TrueCenter(), CurrentSpot.TrueCenter(),
-            comp_LTF_TpSpot.WParams.myWay.WayColoring());
+            compLtfTpSpot.WParams.myWay.WayColoring());
         if (prcDebug)
         {
             Log.Warning("PostDrawExtraSelectionOverlays - 1st DrawLineBetween");
         }
 
-        if (!comp_LTF_TpSpot.IsLinked())
+        if (!compLtfTpSpot.IsLinked())
         {
             return;
         }
@@ -356,7 +346,7 @@ public class Comp_LTF_TpBench : ThingComp
             Log.Warning("PostDrawExtraSelectionOverlays - 2nd DrawLineBetween");
         }
 
-        GenDraw.DrawLineBetween(CurrentSpot.TrueCenter(), comp_LTF_TpSpot.Twin.TrueCenter(),
-            comp_LTF_TpSpot.WParams.myWay.WayColoring());
+        GenDraw.DrawLineBetween(CurrentSpot.TrueCenter(), compLtfTpSpot.Twin.TrueCenter(),
+            compLtfTpSpot.WParams.myWay.WayColoring());
     }
 }

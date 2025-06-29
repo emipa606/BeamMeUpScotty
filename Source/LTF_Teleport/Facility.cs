@@ -10,7 +10,7 @@ public static class Facility
         return TickCheckFacilityPower(facility, compPowerFacility);
     }
 
-    public static bool TickCheckFacilityPower(Building facility, CompPowerTrader powerComp = null, bool debug = false)
+    private static bool TickCheckFacilityPower(Building facility, CompPowerTrader powerComp = null, bool debug = false)
     {
         var facilityPower = true;
         if (debug)

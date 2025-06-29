@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: teleport catcher -->
+  <LTF_TpCatcher.label>teleport catcher</LTF_TpCatcher.label>
+  <!-- EN: A wooden structure for receiving teleport arrivals. Must be associated with a teleport spot. -->
+  <LTF_TpCatcher.description>A wooden structure for receiving teleport arrivals. Must be associated with a teleport spot.</LTF_TpCatcher.description>
+  <!-- EN: Link -->
+  <LTF_TpCatcher.comps.CompUsable.useLabel>Link</LTF_TpCatcher.comps.CompUsable.useLabel>
+</LanguageData>

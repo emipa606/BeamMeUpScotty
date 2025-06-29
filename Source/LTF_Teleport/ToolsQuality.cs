@@ -6,36 +6,6 @@ namespace LTF_Teleport;
 
 public class ToolsQuality
 {
-    public static bool BestQuality(CompQuality compQuality)
-    {
-        if (compQuality == null)
-        {
-            return false;
-        }
-
-        return compQuality.Quality == QualityCategory.Legendary;
-    }
-
-    public static bool WorstQuality(CompQuality compQuality)
-    {
-        if (compQuality == null)
-        {
-            return false;
-        }
-
-        return compQuality.Quality == QualityCategory.Awful;
-    }
-
-    public static string BetterQuality(CompQuality comp)
-    {
-        return VirtualQuality(comp, 1);
-    }
-
-    public static string WorseQuality(CompQuality comp)
-    {
-        return VirtualQuality(comp, -1);
-    }
-
     public static string VirtualQuality(CompQuality comp, int relativeChange = 0)
     {
         var result = "no quality comp";
@@ -62,10 +32,7 @@ public class ToolsQuality
 
     public static bool ChangeQuality(Building building, CompQuality comp, bool better = true)
     {
-        if (comp == null)
-        {
-            comp = building?.TryGetComp<CompQuality>();
-        }
+        comp ??= building?.TryGetComp<CompQuality>();
 
         if (comp == null)
         {
@@ -87,42 +54,6 @@ public class ToolsQuality
         }
 
         return qualityCategory2 != qualityCategory;
-    }
-
-    public static CompQuality SetQuality(Building bench, bool debug = false)
-    {
-        if (bench == null)
-        {
-            if (debug)
-            {
-                Log.Warning("No becnh provided to retrieve comp");
-            }
-
-            return null;
-        }
-
-        var compQuality = bench.TryGetComp<CompQuality>();
-        if (compQuality == null && debug)
-        {
-            Log.Warning("no comp found");
-        }
-
-        return compQuality;
-    }
-
-    public static int Valid(int QualityValue, bool debug = false)
-    {
-        var num = QualityValue;
-        if (num is >= 0 and <= 8)
-        {
-            return num;
-        }
-
-        Tools.Warn($"Stupid Quality:{num}, correcting", debug);
-        num = Mathf.Max(0, num);
-        num = Mathf.Min(8, num);
-
-        return num;
     }
 
     public static float WeightedCapacity(float capacityBase, float capacitySpectrum, CompQuality comp = null,

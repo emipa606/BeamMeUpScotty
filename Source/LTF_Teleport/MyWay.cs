@@ -27,7 +27,7 @@ public static class MyWay
         Way.Swap
     ];
 
-    public static readonly Way[] NextWay =
+    private static readonly Way[] NextWay =
     [
         Way.Out,
         Way.In,
@@ -35,7 +35,7 @@ public static class MyWay
         Way.No
     ];
 
-    public static readonly SimpleColor[] WayColor =
+    private static readonly SimpleColor[] WayColor =
     [
         SimpleColor.White,
         SimpleColor.Red,
@@ -43,7 +43,7 @@ public static class MyWay
         SimpleColor.Magenta
     ];
 
-    public static Way GetNextWay(this Way MyWay, bool IsOrphan)
+    private static Way GetNextWay(this Way MyWay, bool IsOrphan)
     {
         var result = Way.No;
         return IsOrphan ? result : NextWay[(int)MyWay];
@@ -78,7 +78,7 @@ public static class MyWay
             : WayLabel[(int)MyWay.GetNextWay(IsOrphan)];
     }
 
-    public static string WayActionLabeling(this Way MyWay)
+    private static string WayActionLabeling(this Way MyWay)
     {
         return (int)MyWay > WayActionLabel.Length - 1 ? "way action outbound" : WayActionLabel[(int)MyWay];
     }
@@ -96,16 +96,6 @@ public static class MyWay
     public static void ResetWay(this Way MyWay)
     {
         MyWay = Way.No;
-    }
-
-    public static void SetOut(this Way MyWay)
-    {
-        MyWay = Way.Out;
-    }
-
-    public static void SetIn(this Way MyWay)
-    {
-        MyWay = Way.In;
     }
 
     public static void SetSwap(this Way MyWay)

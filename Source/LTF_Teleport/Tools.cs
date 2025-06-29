@@ -22,22 +22,6 @@ public static class Tools
         return $"[{(boolean ? "OK" : "KO")}]";
     }
 
-    public static string IfStr(bool boolean, string myString, bool AddCr = true)
-    {
-        var text = string.Empty;
-        if (AddCr)
-        {
-            text = "\n";
-        }
-
-        if (boolean)
-        {
-            text += myString;
-        }
-
-        return text;
-    }
-
     public static string PosStr(IntVec3 position)
     {
         return $" [{position.x};{position.z}];";
@@ -95,11 +79,6 @@ public static class Tools
         return val > max ? max : val;
     }
 
-    public static float LimitRadius(float value)
-    {
-        return LimitToRange(value, 0f, 55f);
-    }
-
     public static int NextIndexRoundBrowser(int index, int count)
     {
         if (count == 1)
@@ -123,12 +102,6 @@ public static class Tools
     public static string CapacityString(float capacity, float capacityMax)
     {
         return $"{(int)capacity}/{(int)capacityMax}";
-    }
-
-    public static string PawnResumeString(Pawn pawn)
-    {
-        return
-            $"{pawn?.LabelShort.CapitalizeFirst()}, {pawn?.ageTracker?.AgeBiologicalYears ?? 0} y/o {pawn?.gender.GetLabel()}, {pawn?.def?.label}({pawn?.kindDef})";
     }
 
     public static string DebugStatus(bool debug)

@@ -23,19 +23,19 @@ public class Comp_LTF_TpSpot : ThingComp
     private int beginSequenceI;
     public Building building;
 
-    public string buildingName = string.Empty;
+    private string buildingName = string.Empty;
 
     private Vector3 buildingPos;
 
-    public bool drawOverlay = true;
+    private bool drawOverlay = true;
 
-    public bool drawUnderlay = true;
+    private bool drawUnderlay = true;
 
     private Thing ellipseMote;
 
     private int FrameSlower;
 
-    public bool gfxDebug;
+    private bool gfxDebug;
 
     private bool Hax;
 
@@ -49,7 +49,7 @@ public class Comp_LTF_TpSpot : ThingComp
 
     public bool slideShowOn;
 
-    public Gfx.AnimStep TeleportItemAnimStatus = Gfx.AnimStep.na;
+    private Gfx.AnimStep TeleportItemAnimStatus = Gfx.AnimStep.na;
 
     private int TicksNotShowingAlerts;
 
@@ -63,33 +63,33 @@ public class Comp_LTF_TpSpot : ThingComp
 
     public WorkValues Values => tpSpot?.values;
 
-    public Statistics BaseStats => tpSpot?.baseStats;
+    private Statistics BaseStats => tpSpot?.baseStats;
 
-    public Parameters TwinParams => tpSpot?.compTwin?.tpSpot?.wParams;
+    private Parameters TwinParams => tpSpot?.compTwin?.tpSpot?.wParams;
 
-    public WorkValues TwinValues => tpSpot?.compTwin?.tpSpot?.values;
+    private WorkValues TwinValues => tpSpot?.compTwin?.tpSpot?.values;
 
     public Statistics TwinBaseStats => tpSpot?.compTwin?.tpSpot?.baseStats;
 
-    public Map TwinMap => tpSpot?.twin?.Map;
+    private Map TwinMap => tpSpot?.twin?.Map;
 
     public Comp_LTF_TpSpot TwinComp => tpSpot?.compTwin;
 
-    public int RegisteredCount => Values.RegisteredCount;
+    private int RegisteredCount => Values.RegisteredCount;
 
     public float CurrentWeight => Values.currentWeight;
 
     public float WeightCapacity => BaseStats.weightCapacity;
 
-    public int WarmUpLeft => Values.warmUpLeft;
+    private int WarmUpLeft => Values.warmUpLeft;
 
     public float CurrentCooldown => Values.currentCooldown;
 
-    public float CooldownBase => BaseStats.cooldownBase;
+    private float CooldownBase => BaseStats.cooldownBase;
 
     public float Range => BaseStats.range;
 
-    public Building TpFacility => tpSpot.facility;
+    private Building TpFacility => tpSpot.facility;
 
     public bool HasQuality => tpSpot.HasQuality;
 
@@ -121,7 +121,7 @@ public class Comp_LTF_TpSpot : ThingComp
 
     public bool TpSequenceBegin => TeleportItemAnimStatus == Gfx.AnimStep.begin;
 
-    public bool TpSequenceActive => TeleportItemAnimStatus == Gfx.AnimStep.active;
+    private bool TpSequenceActive => TeleportItemAnimStatus == Gfx.AnimStep.active;
 
     public bool TeleportItemAnimNa => TeleportItemAnimStatus == Gfx.AnimStep.na;
 
@@ -193,9 +193,9 @@ public class Comp_LTF_TpSpot : ThingComp
         }
     }
 
-    public string DumpProps => tpSpot.DumpProps(building);
+    private string DumpProps => tpSpot.DumpProps(building);
 
-    public string DumpSettings => tpSpot.DumpSettings;
+    private string DumpSettings => tpSpot.DumpSettings;
 
     public bool IsOut => WParams.myWay.IsOut();
 
@@ -602,7 +602,7 @@ public class Comp_LTF_TpSpot : ThingComp
         beginSequenceI = BeginSequenceFrameLength;
     }
 
-    public void BeginTeleportItemAnimSeq()
+    private void BeginTeleportItemAnimSeq()
     {
         TeleportItemAnimStatus = Gfx.AnimStep.begin;
         SetBeginAnimLength();
@@ -616,22 +616,22 @@ public class Comp_LTF_TpSpot : ThingComp
         SetTicksTpSequenceBegin();
     }
 
-    public void SetTicksNotShowingAlerts()
+    private void SetTicksNotShowingAlerts()
     {
         TicksNotShowingAlerts = TicksNotShowingAlertsBase;
     }
 
-    public void SetTicksTpSequenceActive()
+    private void SetTicksTpSequenceActive()
     {
         TicksTpSequenceActive = TicksTpSequenceActiveBase;
     }
 
-    public void SetTicksTpSequenceBegin()
+    private void SetTicksTpSequenceBegin()
     {
         TicksTpSequenceBegin = TicksTpSequenceBeginBase;
     }
 
-    public bool IncBeginAnim(bool debug = false)
+    private bool IncBeginAnim(bool debug = false)
     {
         beginSequenceI--;
         if (beginSequenceI > 0)
@@ -647,7 +647,7 @@ public class Comp_LTF_TpSpot : ThingComp
         return true;
     }
 
-    public void AnimStatus(bool debug = false)
+    private void AnimStatus(bool debug = false)
     {
         if (debug)
         {
@@ -655,7 +655,7 @@ public class Comp_LTF_TpSpot : ThingComp
         }
     }
 
-    public void SetFrameSlower()
+    private void SetFrameSlower()
     {
         FrameSlower = FrameSlowerMax;
     }
@@ -667,7 +667,7 @@ public class Comp_LTF_TpSpot : ThingComp
         return FrameSlower;
     }
 
-    public void SetSlideShowOn(bool debug = false)
+    private void SetSlideShowOn(bool debug = false)
     {
         if (TwinComp == null)
         {
@@ -678,7 +678,7 @@ public class Comp_LTF_TpSpot : ThingComp
         slideShowOn = true;
     }
 
-    public void NextAnim(bool debug = false)
+    private void NextAnim(bool debug = false)
     {
         if (TwinComp == null)
         {
@@ -1181,22 +1181,22 @@ public class Comp_LTF_TpSpot : ThingComp
         return empty + Tools.OkStr(this.HasNoIssue()) + StatusLog;
     }
 
-    public void UnlinkMe()
+    private void UnlinkMe()
     {
         tpSpot.Unlink();
     }
 
-    public void Browse()
+    private void Browse()
     {
         tpSpot.Browse(prcDebug);
     }
 
-    public void StartCooldown()
+    private void StartCooldown()
     {
         tpSpot.StartCooldown();
     }
 
-    public void StopCooldown()
+    private void StopCooldown()
     {
         tpSpot.StopCooldown();
     }

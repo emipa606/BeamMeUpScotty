@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: teleport spot -->
+  <LTF_TpSpot.label>teleport spot</LTF_TpSpot.label>
+  <!-- EN: Departures here: to infinity and beyond! The teleport spot sends pawns to other locations.\nRequires a teleport bench. -->
+  <LTF_TpSpot.description>Departures here: to infinity and beyond! The teleport spot sends pawns to other locations.
+Requires a teleport bench.</LTF_TpSpot.description>
+  <!-- EN: Link -->
+  <LTF_TpSpot.comps.CompUsable.useLabel>Link</LTF_TpSpot.comps.CompUsable.useLabel>
+</LanguageData>

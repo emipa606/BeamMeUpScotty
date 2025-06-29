@@ -28,8 +28,8 @@ public class Statistics
         }
 
         SetCooldownBase(compSpot, compQ);
-        SetWarmUpBase(compSpot, compQ);
-        SetWeight(compSpot, debug);
+        setWarmUpBase(compSpot, compQ);
+        setWeight(compSpot, debug);
         SetRange(compSpot, compQ);
         if (debug)
         {
@@ -37,7 +37,7 @@ public class Statistics
         }
     }
 
-    private float StuffMultiplier(Thing thing)
+    private static float stuffMultiplier(Thing thing)
     {
         if (thing == null)
         {
@@ -45,13 +45,13 @@ public class Statistics
         }
 
         var stuff = thing.Stuff;
-        var stuffPower_Armor_Sharp = StatDefOf.StuffPower_Armor_Sharp;
-        var stuffPower_Armor_Blunt = StatDefOf.StuffPower_Armor_Blunt;
+        var stuffPowerArmorSharp = StatDefOf.StuffPower_Armor_Sharp;
+        var stuffPowerArmorBlunt = StatDefOf.StuffPower_Armor_Blunt;
         var bluntDamageMultiplier = StatDefOf.BluntDamageMultiplier;
         var sharpDamageMultiplier = StatDefOf.SharpDamageMultiplier;
         var mass = StatDefOf.Mass;
-        var statValueAbstract = stuff.GetStatValueAbstract(stuffPower_Armor_Sharp);
-        var statValueAbstract2 = stuff.GetStatValueAbstract(stuffPower_Armor_Blunt);
+        var statValueAbstract = stuff.GetStatValueAbstract(stuffPowerArmorSharp);
+        var statValueAbstract2 = stuff.GetStatValueAbstract(stuffPowerArmorBlunt);
         var statValueAbstract3 = stuff.GetStatValueAbstract(sharpDamageMultiplier);
         var statValueAbstract4 = stuff.GetStatValueAbstract(bluntDamageMultiplier);
         var statValueAbstract5 = stuff.GetStatValueAbstract(mass);
@@ -65,11 +65,11 @@ public class Statistics
             true, false, compSpot.prcDebug);
         range += 3f * compSpot.TwinWorstFacilityRange();
         range *= benchSynergy;
-        var num = StuffMultiplier(compSpot.parent);
+        var num = stuffMultiplier(compSpot.parent);
         range *= num;
     }
 
-    public void SetWarmUpBase(Comp_LTF_TpSpot compSpot, CompQuality compQ)
+    private void setWarmUpBase(Comp_LTF_TpSpot compSpot, CompQuality compQ)
     {
         warmUpBase = (int)ToolsQuality.FactorCapacity(compSpot.Props.warmUpBase, compSpot.Props.warmUpQualityFactor,
             compQ, false, false, false, compSpot.prcDebug);
@@ -100,7 +100,7 @@ public class Statistics
         }
     }
 
-    public void SetWeight(Comp_LTF_TpSpot compSpot, bool debug = false)
+    private void setWeight(Comp_LTF_TpSpot compSpot, bool debug = false)
     {
         if (compSpot is { HasQuality: true })
         {

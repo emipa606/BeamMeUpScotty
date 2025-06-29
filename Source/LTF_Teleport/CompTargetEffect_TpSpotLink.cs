@@ -41,14 +41,14 @@ public class CompTargetEffect_TpSpotLink : CompTargetEffect
             return;
         }
 
-        var comp_LTF_TpSpot = building.TryGetComp<Comp_LTF_TpSpot>();
-        var comp_LTF_TpSpot2 = building2.TryGetComp<Comp_LTF_TpSpot>();
-        if (comp_LTF_TpSpot == null || comp_LTF_TpSpot2 == null)
+        var compLtfTpSpot = building.TryGetComp<Comp_LTF_TpSpot>();
+        var compLtfTpSpot2 = building2.TryGetComp<Comp_LTF_TpSpot>();
+        if (compLtfTpSpot == null || compLtfTpSpot2 == null)
         {
             return;
         }
 
-        if (comp_LTF_TpSpot.prcDebug)
+        if (compLtfTpSpot.prcDebug)
         {
             Log.Warning($"Trying to register: {building2.Label} in {building?.Label}");
         }
@@ -56,8 +56,8 @@ public class CompTargetEffect_TpSpotLink : CompTargetEffect
         if (building != null)
         {
             var num = building.Position.DistanceTo(building2.Position);
-            var num2 = ToolsBuilding.TheoricBestRange(comp_LTF_TpSpot, comp_LTF_TpSpot2);
-            if (comp_LTF_TpSpot.prcDebug)
+            var num2 = ToolsBuilding.TheoricBestRange(compLtfTpSpot, compLtfTpSpot2);
+            if (compLtfTpSpot.prcDebug)
             {
                 Log.Warning($"dist:{num} ; range:{num2}");
             }
@@ -70,13 +70,13 @@ public class CompTargetEffect_TpSpotLink : CompTargetEffect
             }
         }
 
-        var link = comp_LTF_TpSpot.tpSpot.CreateLink(building, comp_LTF_TpSpot, building2, comp_LTF_TpSpot2,
-            comp_LTF_TpSpot.prcDebug);
+        var link = compLtfTpSpot.tpSpot.CreateLink(building, compLtfTpSpot, building2, compLtfTpSpot2,
+            compLtfTpSpot.prcDebug);
         Messages.Message(
-            "BmuS.WasWasntLinked".Translate(Tools.OkStr(link), building?.Label, comp_LTF_TpSpot.MyCoordinates,
-                link ? "" : "BmuS.Not".Translate(), building2.Label, comp_LTF_TpSpot2.MyCoordinates),
+            "BmuS.WasWasntLinked".Translate(Tools.OkStr(link), building?.Label, compLtfTpSpot.MyCoordinates,
+                link ? "" : "BmuS.Not".Translate(), building2.Label, compLtfTpSpot2.MyCoordinates),
             parent, MessageTypeDefOf.TaskCompletion);
-        if (comp_LTF_TpSpot.prcDebug)
+        if (compLtfTpSpot.prcDebug)
         {
             Log.Warning($"{Tools.OkStr(link)}registered: {building2.Label} in {building?.Label}");
         }

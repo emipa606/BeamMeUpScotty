@@ -1,5 +1,4 @@
 using System;
-using Verse;
 
 namespace LTF_Teleport;
 
@@ -70,19 +69,7 @@ public static class Status
         switch (compSpot.WParams.myWay)
         {
             case MyWay.Way.Out:
-                if (compSpot.HasNothing())
-                {
-                    buildingStatus ^= BuildingStatus.noItem;
-                }
-
-                break;
             case MyWay.Way.Swap:
-                if (compSpot.HasNothing())
-                {
-                    buildingStatus ^= BuildingStatus.noItem;
-                }
-
-                break;
             default:
                 if (compSpot.HasNothing())
                 {
@@ -102,19 +89,14 @@ public static class Status
         return buildingStatus;
     }
 
-    private static bool HasStatus(this Comp_LTF_TpSpot compSpot, BuildingStatus buildingStatus)
+    private static bool hasStatus(this Comp_LTF_TpSpot compSpot, BuildingStatus buildingStatus)
     {
         return (compSpot.TeleportCapable() & buildingStatus) != 0;
     }
 
-    public static bool HasPowerTrader(this Comp_LTF_TpSpot compSpot)
-    {
-        return compSpot.tpSpot.HasPowerTrader;
-    }
-
     public static bool HasNoPower(this Comp_LTF_TpSpot compSpot)
     {
-        return compSpot.HasStatus(BuildingStatus.noPower);
+        return compSpot.hasStatus(BuildingStatus.noPower);
     }
 
     public static bool HasPower(this Comp_LTF_TpSpot compSpot)
@@ -122,27 +104,22 @@ public static class Status
         return !compSpot.HasNoPower();
     }
 
-    public static bool StatusNoFacility(this Comp_LTF_TpSpot compSpot)
+    private static bool StatusNoFacility(this Comp_LTF_TpSpot compSpot)
     {
-        return compSpot.HasStatus(BuildingStatus.noFacility);
+        return compSpot.hasStatus(BuildingStatus.noFacility);
     }
 
     private static bool StatusNoItem(this Comp_LTF_TpSpot compSpot)
     {
-        return compSpot.HasStatus(BuildingStatus.noItem);
-    }
-
-    private static bool StatusHasItem(this Comp_LTF_TpSpot compSpot)
-    {
-        return !compSpot.StatusNoItem();
+        return compSpot.hasStatus(BuildingStatus.noItem);
     }
 
     public static bool HasOverweight(this Comp_LTF_TpSpot compSpot)
     {
-        return compSpot.HasStatus(BuildingStatus.overweight);
+        return compSpot.hasStatus(BuildingStatus.overweight);
     }
 
-    public static bool SupportsWeight(this Comp_LTF_TpSpot compSpot)
+    private static bool SupportsWeight(this Comp_LTF_TpSpot compSpot)
     {
         return !compSpot.HasOverweight();
     }
@@ -154,25 +131,25 @@ public static class Status
             return false;
         }
 
-        if (compSpot.HasStatus(BuildingStatus.cooldown))
+        if (compSpot.hasStatus(BuildingStatus.cooldown))
         {
             return true;
         }
 
-        return compSpot.tpSpot.IsLinked && compSpot.TwinComp.HasStatus(BuildingStatus.cooldown);
+        return compSpot.tpSpot.IsLinked && compSpot.TwinComp.hasStatus(BuildingStatus.cooldown);
     }
 
-    public static bool HasNoCooldown(this Comp_LTF_TpSpot compSpot)
+    private static bool HasNoCooldown(this Comp_LTF_TpSpot compSpot)
     {
         return !compSpot.StatusWaitingForCooldown();
     }
 
-    public static bool StatusReady(this Comp_LTF_TpSpot compSpot)
+    private static bool StatusReady(this Comp_LTF_TpSpot compSpot)
     {
-        return compSpot.HasStatus(BuildingStatus.capable);
+        return compSpot.hasStatus(BuildingStatus.capable);
     }
 
-    public static bool StatusNoIssue(this Comp_LTF_TpSpot compSpot)
+    private static bool StatusNoIssue(this Comp_LTF_TpSpot compSpot)
     {
         var noSpot = true;
         if (compSpot.tpSpot == null)
@@ -195,12 +172,6 @@ public static class Status
         return noSpot & compSpot.SupportsWeight();
     }
 
-    public static void StatusNoIssueDebug(this Comp_LTF_TpSpot compSpot)
-    {
-        Log.Warning(
-            $"requiresPower:{compSpot.Props.requiresPower}; hasPower:{compSpot.HasPower()}; requiresFacility{compSpot.Props.requiresFacility}; hasFacility:{compSpot.HasPoweredFacility()}; IsLinked:{compSpot.tpSpot.IsLinked}; HasNoCooldown:{compSpot.HasNoCooldown()}; SupportsWeight:{compSpot.SupportsWeight()}");
-    }
-
     public static bool IsLinked(this Comp_LTF_TpSpot compSpot)
     {
         return compSpot.tpSpot is { IsLinked: true };
@@ -218,7 +189,7 @@ public static class Status
 
     public static bool HasPoweredFacility(this Comp_LTF_TpSpot compSpot)
     {
-        if (compSpot.tpSpot == null || compSpot.tpSpot.facility == null)
+        if (compSpot.tpSpot?.facility == null)
         {
             return false;
         }
@@ -234,16 +205,6 @@ public static class Status
     public static bool HasItems(this Comp_LTF_TpSpot compSpot)
     {
         return compSpot.tpSpot.values.HasItems;
-    }
-
-    public static bool HasHumanoid(this Comp_LTF_TpSpot compSpot)
-    {
-        return compSpot.tpSpot.values.HasHumanoid;
-    }
-
-    public static bool HasAnimal(this Comp_LTF_TpSpot compSpot)
-    {
-        return compSpot.tpSpot.values.HasAnimal;
     }
 
     public static bool HasNoIssue(this Comp_LTF_TpSpot compSpot)

@@ -1,4 +1,4 @@
-# [Beam me up Scotty (Continued)]()
+# [Beam me up Scotty (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3328183029)
 
 ![Image](https://i.imgur.com/buuPQel.png)
 
@@ -105,8 +105,6 @@ Update of Gouda quiches mod https://steamcommunity.com/sharedfiles/filedetails/?
 
 This is part of my **Faster Than Light** for RimWorld collection :  [Lighter Than Fast](http://steamcommunity.com/sharedfiles/filedetails/?id=1305158955).
 
-[![Image](https://i.imgur.com/R3wxkQW.png)](https://ko-fi.com/goudaquiche)
-
 ![Image](https://i.imgur.com/PwoNOj4.png)
 
 
@@ -119,4 +117,6 @@ This is part of my **Faster Than Light** for RimWorld collection :  [Lighter Tha
 -  If you have the solution for a problem, please post it to the GitHub repository.
 -  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
 
+ 
 
+[![Image](https://img.shields.io/github/v/release/emipa606/BeamMeUpScotty?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3328183029) | tags: teleportation,  technology

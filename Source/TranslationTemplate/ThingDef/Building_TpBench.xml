@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: teleporter workstation -->
+  <LTF_TpBench.label>teleporter workstation</LTF_TpBench.label>
+  <!-- EN: A large workstation for controlling the teleporter. Requires a lot of power.\n- Requires at least 1 teleport spot.\nState your orders and schedule strategic wanderings. -->
+  <LTF_TpBench.description>A large workstation for controlling the teleporter. Requires a lot of power.
+- Requires at least 1 teleport spot.
+State your orders and schedule strategic wanderings.</LTF_TpBench.description>
+</LanguageData>

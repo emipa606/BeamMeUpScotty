@@ -1,0 +1,6 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Release" />
+  </Configurations>
+  <Project Path="LTF_Teleport/LTF_Teleport.csproj" />
+</Solution>

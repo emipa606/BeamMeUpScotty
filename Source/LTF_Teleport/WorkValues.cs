@@ -11,10 +11,10 @@ public class WorkValues : IExposable
 
     public float currentWeight;
 
-    public bool factionMajority;
+    private bool factionMajority;
     public float orderRange;
 
-    public Pawn standingUser;
+    private Pawn standingUser;
 
     public List<Thing> thingList = [];
 
@@ -22,7 +22,7 @@ public class WorkValues : IExposable
 
     public int warmUpLeft;
 
-    public int warmUpDone => warmUpCalculated - warmUpLeft;
+    private int warmUpDone => warmUpCalculated - warmUpLeft;
 
     public bool WaitingForWarmUp => warmUpLeft > 0;
 
@@ -46,9 +46,9 @@ public class WorkValues : IExposable
 
     public bool WaitingForCooldown => currentCooldown > 0f;
 
-    public bool HasRegisteredPawn => standingUser != null;
+    private bool HasRegisteredPawn => standingUser != null;
 
-    public bool HasAnimal =>
+    private bool HasAnimal =>
         HasRegisteredPawn && !standingUser.RaceProps.Humanlike && !standingUser.RaceProps.IsMechanoid;
 
     public bool HasMechanoid => HasRegisteredPawn && standingUser.RaceProps.IsMechanoid;
@@ -272,18 +272,18 @@ public class WorkValues : IExposable
             Log.Warning(text);
         }
 
-        if (num == 0)
+        switch (num)
         {
-            ResetPawn();
-        }
-        else if (num > 1)
-        {
-            ResetPawn();
-            ResetItems();
-        }
-        else
-        {
-            SetPawn(pawn);
+            case 0:
+                ResetPawn();
+                break;
+            case > 1:
+                ResetPawn();
+                ResetItems();
+                break;
+            default:
+                SetPawn(pawn);
+                break;
         }
 
         if (!addSpotItems)

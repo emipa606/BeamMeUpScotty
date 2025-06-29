@@ -1,0 +1,114 @@
+ManifestFileVersion: 0
+CRC: 859561122
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c8f9c1f0389055c8b214631d1abe13eb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ce3b6d18a872ca8039cd5eb3c4fb7ef5
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: c8f9c1f0389055c8b214631d1abe13eb
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpBench/overlay/TpIn.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpSpot/WayIn.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/trash/LaunchOk.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpSpot/TpSpot.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpBed/TpBed_north.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpSpot/Underlay/WaySwap.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpBench/TpBench_south.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/NextTp.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/Hax/HaxWorse.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/Debug/DebugLog.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/Issue/OrphanTwin.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Effects/Spiral/SpiralOut.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpSpot/FloatMenu/CmdNo.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpSpot/TpSpot_m.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/Issue/UnpoweredTwin.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/Issue/NoFacility.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Effects/Spiral/SpiralIn.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/AnimationOverlay/matrix/matrixD.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpCatcher/TpCatcher_m.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Effects/Ellipse/EllipseOut.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpBench/TpBench_north.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpSpot/Overlay/Warning/FacilityPower.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/AnimationOverlay/matrix/matrixC.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/Issue/Orphan.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpSpot/LinkOn.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/RegistryLog.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/Hax/HaxEmpty.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/Issue/UnpoweredFacility.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpBed/TpBed_eastm.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/trash/LaunchKo.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Effects/Spiral/SpiralSwap.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/Issue/OverweightTwin.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpBox/TpBox.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/AnimationOverlay/matrix/matrixG.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/Issue/UnpoweredFacilityTwin.png
+- Assets/Data/Mlie.BeamMeUpScotty/Sounds/Special/TpSound.mp3
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/Issue/Overweight.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpBench/TpBench_northm.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpSpot/FloatMenu/CmdOut.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/AnimationOverlay/matrix/matrixB.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpBench/TpBench_eastm.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/Quality/Good.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Effects/Ellipse/EllipseIn.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpBed/TpBed_northm.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpBench/TpBench_southm.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpSpot/Overlay/Warning/Facility.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpBed/TpBed_east.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpSpot/Underlay/WayIn.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/Issue/Empty.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpSpot/Overlay/Warning/Overweight.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpSpot/WayNo.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpBed/TpBed_southm.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpCatcher/TpCatcher.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/AnimationOverlay/matrix/matrixF.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/Issue/Cooldown.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Effects/Ellipse/EllipseSwap.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/AnimationOverlay/matrix/matrixH.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/RegistryEmpty.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/Hax/HaxSub.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpBench/TpBench_east.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/Issue/Unpowered.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpBench/overlay/TpOut.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpSpot/Underlay/InitOrder.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpSpot/Overlay/Warning/Cooldown.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpSpot/FloatMenu/CmdSwap.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/Issue/CooldownTwin.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpSpot/FloatMenu/CmdIn.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/Debug/DebugOff.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Effects/Flash.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpSpot/WaySwap.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpBed/TpBed_south.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpSpot/Underlay/WayOut.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpSpot/LinkOff.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/AnimationOverlay/matrix/matrixA.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/Hax/HaxBetter.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/Quality/Normal.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/Hax/HaxAdd.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/Issue/NoFacilityTwin.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/Quality/Bad.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpSpot/Underlay/Underlay.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/MiniStation/MiniStation_m.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/AnimationOverlay/matrix/matrixE.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpSpot/WayOut.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpSpot/AutoOff.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/RegistryFull.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpBench/Issue/EmptyTwin.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpBench/overlay/TpIcon.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/Debug/DebugOn.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/Debug/Debug.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/TpSpot/AutoOn.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/TpBox/TpBox_m.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/UI/Commands/Hax/HaxFull.png
+- Assets/Data/Mlie.BeamMeUpScotty/Textures/Things/Building/MiniStation/MiniStation.png
+Dependencies: []

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: teleportation bench -->
+  <LTF_Research_TpBench.label>teleportation bench</LTF_Research_TpBench.label>
+  <!-- EN: Construct a workbench to control your teleportation system. -->
+  <LTF_Research_TpBench.description>Construct a workbench to control your teleportation system.</LTF_Research_TpBench.description>
+  <!-- EN: teleportation spot -->
+  <LTF_Research_TpSpot.label>teleportation spot</LTF_Research_TpSpot.label>
+  <!-- EN: Build a teleportation spot to send pawns elsewhere. -->
+  <LTF_Research_TpSpot.description>Build a teleportation spot to send pawns elsewhere.</LTF_Research_TpSpot.description>
+</LanguageData>

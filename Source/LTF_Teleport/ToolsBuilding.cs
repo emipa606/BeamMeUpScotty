@@ -44,28 +44,6 @@ public static class ToolsBuilding
         return true;
     }
 
-    public static CompAffectedByFacilities GetAffectedComp(Building building, bool debug = false)
-    {
-        if (!CheckBuilding(building))
-        {
-            Tools.Warn("//bad building, wont check facility", debug);
-            return null;
-        }
-
-        var compAffectedByFacilities = building.TryGetComp<CompAffectedByFacilities>();
-        if (compAffectedByFacilities != null)
-        {
-            return compAffectedByFacilities;
-        }
-
-        if (debug)
-        {
-            Log.Warning("//no affected by facility comp found");
-        }
-
-        return null;
-    }
-
     public static Building GetFacility(CompAffectedByFacilities buildingFacilityComp, bool debug = false)
     {
         if (buildingFacilityComp == null)

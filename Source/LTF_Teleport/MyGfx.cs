@@ -6,39 +6,39 @@ namespace LTF_Teleport;
 [StaticConstructorOnStartup]
 public static class MyGfx
 {
-    public static readonly string tpSpotPath = "Things/Building/TpSpot/";
+    private static readonly string tpSpotPath = "Things/Building/TpSpot/";
 
-    public static readonly string underlayPath = $"{tpSpotPath}Underlay/";
+    private static readonly string underlayPath = $"{tpSpotPath}Underlay/";
 
-    public static readonly string overlayPath = $"{tpSpotPath}Overlay/";
+    private static readonly string overlayPath = $"{tpSpotPath}Overlay/";
 
-    public static readonly string warningPath = $"{overlayPath}Warning/";
+    private static readonly string warningPath = $"{overlayPath}Warning/";
 
-    public static readonly Material WayOutM = MaterialPool.MatFrom($"{underlayPath}WayOut", ShaderDatabase.MoteGlow);
+    private static readonly Material WayOutM = MaterialPool.MatFrom($"{underlayPath}WayOut", ShaderDatabase.MoteGlow);
 
-    public static readonly Material WayInM = MaterialPool.MatFrom($"{underlayPath}WayIn", ShaderDatabase.MoteGlow);
+    private static readonly Material WayInM = MaterialPool.MatFrom($"{underlayPath}WayIn", ShaderDatabase.MoteGlow);
 
-    public static readonly Material WaySwapM = MaterialPool.MatFrom($"{underlayPath}WaySwap", ShaderDatabase.MoteGlow);
+    private static readonly Material WaySwapM = MaterialPool.MatFrom($"{underlayPath}WaySwap", ShaderDatabase.MoteGlow);
 
-    public static readonly Material InitOrderM =
+    private static readonly Material InitOrderM =
         MaterialPool.MatFrom($"{underlayPath}InitOrder", ShaderDatabase.MoteGlow);
 
     public static readonly Material
         UnderlayM = MaterialPool.MatFrom($"{underlayPath}Underlay", ShaderDatabase.MoteGlow);
 
-    public static readonly Material OverweightM =
+    private static readonly Material OverweightM =
         MaterialPool.MatFrom($"{warningPath}Overweight", ShaderDatabase.MetaOverlay);
 
-    public static readonly Material CooldownM =
+    private static readonly Material CooldownM =
         MaterialPool.MatFrom($"{warningPath}Cooldown", ShaderDatabase.MetaOverlay);
 
-    public static readonly Material FacilityM =
+    private static readonly Material FacilityM =
         MaterialPool.MatFrom($"{warningPath}Facility", ShaderDatabase.MetaOverlay);
 
-    public static readonly Material FacilityPowerM =
+    private static readonly Material FacilityPowerM =
         MaterialPool.MatFrom($"{warningPath}FacilityPower", ShaderDatabase.MetaOverlay);
 
-    public static readonly ThingDef[] EllipseMoteList =
+    private static readonly ThingDef[] EllipseMoteList =
     [
         null,
         ThingDef.Named("LTF_Teleport_Mote_EllipseOut"),
@@ -46,7 +46,7 @@ public static class MyGfx
         ThingDef.Named("LTF_Teleport_Mote_EllipseSwap")
     ];
 
-    public static readonly ThingDef[] SpiralMoteList =
+    private static readonly ThingDef[] SpiralMoteList =
     [
         null,
         ThingDef.Named("LTF_Teleport_Mote_SpiralOut"),

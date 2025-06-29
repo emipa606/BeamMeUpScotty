@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: teleport box -->
+  <LTF_TpBox.label>teleport box</LTF_TpBox.label>
+  <!-- EN: A structure made to teleport incapacitated animals. Must be associated with a teleport spot. -->
+  <LTF_TpBox.description>A structure made to teleport incapacitated animals. Must be associated with a teleport spot.</LTF_TpBox.description>
+  <!-- EN: Link -->
+  <LTF_TpBox.comps.CompUsable.useLabel>Link</LTF_TpBox.comps.CompUsable.useLabel>
+</LanguageData>
