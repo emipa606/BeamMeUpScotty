@@ -70,11 +70,11 @@
   <BmuS.WasWasntLinked>{0}{1}{2}被{3}连接到{4}{5}。</BmuS.WasWasntLinked>
   <BmuS.Not>不</BmuS.Not>
   <BmuS.LinkedSpot>(连接点)</BmuS.LinkedSpot>
-  <BmuS.PowerRequired>所需功率{0｝</BmuS.PowerRequired>
-  <BmuS.FacilityRequired>所需设施{0｝</BmuS.FacilityRequired>
-  <BmuS.FacilityPowerRequired>需要供电设施{0｝</BmuS.FacilityPowerRequired>
-  <BmuS.ExcessWeight>检测到超重{0｝</BmuS.ExcessWeight>
-  <BmuS.Cooldown>冷却中{0｝</BmuS.Cooldown>
-  <BmuS.OrphanSpotIs>孤儿点{0｝</BmuS.OrphanSpotIs>
+  <BmuS.PowerRequired>所需功率{0}</BmuS.PowerRequired>
+  <BmuS.FacilityRequired>所需设施{0}</BmuS.FacilityRequired>
+  <BmuS.FacilityPowerRequired>需要供电设施{0}</BmuS.FacilityPowerRequired>
+  <BmuS.ExcessWeight>检测到超重{0}</BmuS.ExcessWeight>
+  <BmuS.Cooldown>冷却中{0}</BmuS.Cooldown>
+  <BmuS.OrphanSpotIs>孤儿点{0}</BmuS.OrphanSpotIs>
   <BmuS.ShouldNotHappen>这种情况不应该发生{0}。</BmuS.ShouldNotHappen>
 </LanguageData>

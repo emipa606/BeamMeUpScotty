@@ -1,18 +1,18 @@
 # [Beam me up Scotty (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3328183029)
 
-![Image](https://i.imgur.com/buuPQel.png)
+![Image](https://img.litet.net/logos/Info.png)
 
 Update of Gouda quiches mod https://steamcommunity.com/sharedfiles/filedetails/?id=1507132557
 
-![Image](https://i.imgur.com/pufA0kM.png)
+![Image](https://img.litet.net/logos/Notice.png)
 	
-![Image](https://i.imgur.com/Z4GOv8H.png)
+![Image](https://img.litet.net/logos/OriginalDescription.png)
 
-![Image](https://i.imgur.com/9Bu9Lem.png)
+![Image](https://img.litet.net/9Bu9Lem.png)
 
 ![Image](https://vignette.wikia.nocookie.net/ftl/images/4/42/CrewTeleporterCircle.png/revision/latest?cb=20150924212252) Travel through space at light speed.
 
-![Image](https://i.imgur.com/CVlgJM7.png)
+![Image](https://img.litet.net/CVlgJM7.png)
 
 
 
@@ -25,7 +25,7 @@ Update of Gouda quiches mod https://steamcommunity.com/sharedfiles/filedetails/?
 
 
 
-![Image](https://i.imgur.com/dhRaYyd.png)
+![Image](https://img.litet.net/dhRaYyd.png)
 
 
 
@@ -38,7 +38,7 @@ Update of Gouda quiches mod https://steamcommunity.com/sharedfiles/filedetails/?
 -  Alternatively, you can choose to teleport automatically, by setting it up on the teleport spot.
 
 
-![Image](https://i.imgur.com/v1lhRUH.gif)
+![Image](https://img.litet.net/v1lhRUH.gif)
 
 # Travel between maps :
 
@@ -52,9 +52,9 @@ Update of Gouda quiches mod https://steamcommunity.com/sharedfiles/filedetails/?
 -  Profit.
 
 
-![Image](https://i.imgur.com/yGSWYmb.gif)
+![Image](https://img.litet.net/yGSWYmb.gif)
 
-![Image](https://i.imgur.com/9kOXMXt.png)
+![Image](https://img.litet.net/9kOXMXt.png)
 
 
 
@@ -62,7 +62,7 @@ Update of Gouda quiches mod https://steamcommunity.com/sharedfiles/filedetails/?
 
 
 
-![Image](https://i.imgur.com/F0Jvl6C.png)
+![Image](https://img.litet.net/F0Jvl6C.png)
 
 
 
@@ -71,7 +71,7 @@ Update of Gouda quiches mod https://steamcommunity.com/sharedfiles/filedetails/?
 
 
 
-![Image](https://i.imgur.com/mPn1G3B.png)
+![Image](https://img.litet.net/mPn1G3B.png)
 
 
 
@@ -105,13 +105,13 @@ Update of Gouda quiches mod https://steamcommunity.com/sharedfiles/filedetails/?
 
 This is part of my **Faster Than Light** for RimWorld collection :  [Lighter Than Fast](http://steamcommunity.com/sharedfiles/filedetails/?id=1305158955).
 
-![Image](https://i.imgur.com/PwoNOj4.png)
+![Image](https://img.litet.net/logos/ReportingIssues.png)
 
 
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using [HugsLib](https://steamcommunity.com/workshop/filedetails/?id=818773962) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
+-  Always post your log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404)
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
@@ -119,4 +119,4 @@ This is part of my **Faster Than Light** for RimWorld collection :  [Lighter Tha
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/BeamMeUpScotty?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3328183029) | tags: teleportation,  technology
+[![Image](https://img.shields.io/github/v/release/emipa606/BeamMeUpScotty?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3328183029) | tags: teleportation, technology

@@ -667,7 +667,7 @@ public class Comp_LTF_TpSpot : ThingComp
         return FrameSlower;
     }
 
-    private void SetSlideShowOn(bool debug = false)
+    private void SetSlideShowOn()
     {
         if (TwinComp == null)
         {
@@ -678,7 +678,7 @@ public class Comp_LTF_TpSpot : ThingComp
         slideShowOn = true;
     }
 
-    private void NextAnim(bool debug = false)
+    private void NextAnim()
     {
         if (TwinComp == null)
         {
@@ -1103,8 +1103,8 @@ public class Comp_LTF_TpSpot : ThingComp
                 if (WarmUpLeft == 0)
                 {
                     empty += "Trying to TP";
-                    var tryTeleport = false;
-                    if (tryTeleport == TryTeleport(prcDebug))
+                    var tryTeleport = TryTeleport(prcDebug);
+                    if (tryTeleport)
                     {
                         SoundDef.Named("LTF_TpSpotOut").PlayOneShotOnCamera(parent.Map);
                         SoundDef.Named("LTF_TpSpotOut").PlayOneShotOnCamera(TwinMap);

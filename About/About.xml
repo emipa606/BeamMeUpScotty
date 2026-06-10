@@ -13,26 +13,26 @@
   </supportedVersions>
   <modDependencies />
   <loadAfter />
-  <description>[img]https://i.imgur.com/buuPQel.png[/img]
+  <description>[img]https://img.litet.net/logos/Info.png[/img]
 Update of Gouda quiches mod https://steamcommunity.com/sharedfiles/filedetails/?id=1507132557
 
-[img]https://i.imgur.com/pufA0kM.png[/img]
+[img]https://img.litet.net/logos/Notice.png[/img]
 
 [table]
-    [tr][td][url=https://dsc.gg/mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td] [td][url=https://github.com/emipa606/BeamMeUpScotty][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+    [tr][td][url=https://discord.gg/h5TY6DA][img]https://img.litet.net/logos/Discord.png[/img][/url][/td] [td][url=https://github.com/emipa606/BeamMeUpScotty][img]https://img.litet.net/logos/Github.png[/img][/url][/td]
     [/tr]
     [tr]
-        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
-        [td][img]https://i.imgur.com/Be8E2qJ.png[/img][/td]
+        [td][img]https://img.litet.net/logos/SafeToAdd.png[/img][/td]
+        [td][img]https://img.litet.net/logos/RemoveMayWork.png[/img][/td]
     [/tr]
 [/table]
 	
-[img]https://i.imgur.com/Z4GOv8H.png[/img]
-[img]https://i.imgur.com/9Bu9Lem.png[/img]
+[img]https://img.litet.net/logos/OriginalDescription.png[/img]
+[img]https://img.litet.net/9Bu9Lem.png[/img]
 
 [img]https://vignette.wikia.nocookie.net/ftl/images/4/42/CrewTeleporterCircle.png/revision/latest?cb=20150924212252[/img] Travel through space at light speed.
 
-[img]https://i.imgur.com/CVlgJM7.png[/img]
+[img]https://img.litet.net/CVlgJM7.png[/img]
 [list]
 [*][b]Teleport workstation[/b]: at least one is needed. It will give orders to tp spots.
 [*][b]Mini station[/b]: smaller workstation, with smaller capacities.
@@ -42,7 +42,7 @@ Update of Gouda quiches mod https://steamcommunity.com/sharedfiles/filedetails/?
 [*][b]Teleport box[/b]: did you think we would leave the cat behind?
 [/list]
 
-[img]https://i.imgur.com/dhRaYyd.png[/img]
+[img]https://img.litet.net/dhRaYyd.png[/img]
 [list]
 [*] Build a workstation (power required)
 [*] Build a spot in workstation range (power required)
@@ -52,7 +52,7 @@ Update of Gouda quiches mod https://steamcommunity.com/sharedfiles/filedetails/?
 [*] Select workstation to start it up. You can browse different tp spots within range.
 [*] Alternatively, you can choose to teleport automatically, by setting it up on the teleport spot.
 [/list]
-[img]https://i.imgur.com/v1lhRUH.gif[/img]
+[img]https://img.litet.net/v1lhRUH.gif[/img]
 
 [h1]Travel between maps :[/h1]
 [list]
@@ -63,20 +63,20 @@ Update of Gouda quiches mod https://steamcommunity.com/sharedfiles/filedetails/?
 [*] ???
 [*] Profit.
 [/list]
-[img]https://i.imgur.com/yGSWYmb.gif[/img]
+[img]https://img.litet.net/yGSWYmb.gif[/img]
 
-[img]https://i.imgur.com/9kOXMXt.png[/img]
+[img]https://img.litet.net/9kOXMXt.png[/img]
 [list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2203002421]Mantis B, the basilisk[/url]
 [/list]
 
-[img]https://i.imgur.com/F0Jvl6C.png[/img]
+[img]https://img.litet.net/F0Jvl6C.png[/img]
 [list]
 [*]Works with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1909914131]Save Our Ship 2[/url].
 [/list]
 
 
-[img]https://i.imgur.com/mPn1G3B.png[/img]
+[img]https://img.litet.net/mPn1G3B.png[/img]
 [list]
 [*]Bunkier, main artist
 [*]Lilairen, Literary priestess
@@ -101,17 +101,17 @@ Update of Gouda quiches mod https://steamcommunity.com/sharedfiles/filedetails/?
 
 This is part of my [b]Faster Than Light[/b] for RimWorld collection :  [url=http://steamcommunity.com/sharedfiles/filedetails/?id=1305158955]Lighter Than Fast[/url].
 
-[img]https://i.imgur.com/PwoNOj4.png[/img]
+[img]https://img.litet.net/logos/ReportingIssues.png[/img]
 [list]
 [*] See if the the error persists if you just have this mod and its requirements active.
 [*] If not, try adding your other mods until it happens again.
-[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] or the standalone [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Uploader[/url] and command Ctrl+F12
+[*] Always post your log using the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Log Uploader[/url]
 [*] For best support, please use the Discord-channel for error-reporting.
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
 [*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
 [/list] 
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3328183029][img]https://img.shields.io/github/v/release/emipa606/BeamMeUpScotty?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | tags: teleportation,  technology</description>
-  <modVersion IgnoreIfNoMatchingField="True">1.6.0</modVersion>
+[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3328183029][img]https://img.shields.io/github/v/release/emipa606/BeamMeUpScotty?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | tags: teleportation, technology</description>
+  <modVersion IgnoreIfNoMatchingField="True">1.6.1</modVersion>
 </ModMetaData>

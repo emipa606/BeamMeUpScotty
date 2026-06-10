@@ -16,18 +16,21 @@ public static class MyDefs
 
     private static readonly ThingDef tpBoxDef = ThingDef.Named("LTF_TpBox");
 
-    public static bool UnpoweredTp(this Thing tpThing)
+    extension(Thing tpThing)
     {
-        return tpThing.def == tpBedDef || tpThing.def == tpBoxDef || tpThing.def == tpCatcherDef;
-    }
+        public bool UnpoweredTp()
+        {
+            return tpThing.def == tpBedDef || tpThing.def == tpBoxDef || tpThing.def == tpCatcherDef;
+        }
 
-    public static bool IsTpSpot(this Thing thing)
-    {
-        return thing.def == tpSpotDef;
-    }
+        public bool IsTpSpot()
+        {
+            return tpThing.def == tpSpotDef;
+        }
 
-    public static bool IsMiniStation(this Thing thing)
-    {
-        return thing.def == miniStationDef;
+        public bool IsMiniStation()
+        {
+            return tpThing.def == miniStationDef;
+        }
     }
 }

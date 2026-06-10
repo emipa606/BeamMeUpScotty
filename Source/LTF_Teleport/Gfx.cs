@@ -40,112 +40,6 @@ public static class Gfx
         return !cell.InBounds(map) || !cell.ShouldSpawnMotesAt(map) || map.moteCounter.SaturatedLowPriority;
     }
 
-    public static Thing ThrowTpSpotEllipseMote(this Comp_LTF_TpSpot comp)
-    {
-        var building = comp.building;
-        if (building.Negligeable())
-        {
-            return null;
-        }
-
-        var map = building.Map;
-        var position = building.Position;
-        if (impossibleMote(map, position))
-        {
-            return null;
-        }
-
-        var thingDef = comp.EllipseMote();
-        if (thingDef == null)
-        {
-            return null;
-        }
-
-        var moteThrown = (MoteThrown)ThingMaker.MakeThing(thingDef);
-        moteThrown.exactPosition = building.DrawPos;
-        if (comp.IsIn)
-        {
-            moteThrown.exactPosition.z += 0.75f;
-            moteThrown.SetVelocity(Vector3.down.AngleFlat(), -0.6f);
-            moteThrown.Scale = 1.5f;
-        }
-        else if (comp.IsOut)
-        {
-            moteThrown.SetVelocity(Vector3.up.AngleFlat(), 0.6f);
-            moteThrown.Scale = 0.65f;
-        }
-        else if (comp.IsSwap)
-        {
-            if (Rand.Chance(0.5f))
-            {
-                moteThrown.exactPosition.z += 0.75f;
-                moteThrown.SetVelocity(Vector3.down.AngleFlat(), -0.6f);
-            }
-            else
-            {
-                moteThrown.SetVelocity(Vector3.up.AngleFlat(), 0.6f);
-            }
-        }
-
-        return GenSpawn.Spawn(moteThrown, position, map);
-    }
-
-    public static void ThrowTpSpotFlashMote(this Comp_LTF_TpSpot comp, bool appear = true)
-    {
-        var building = comp.building;
-        if (building.Negligeable())
-        {
-            return;
-        }
-
-        var map = building.Map;
-        var position = building.Position;
-        if (impossibleMote(map, position))
-        {
-            return;
-        }
-
-        var thingDef = appear ? MyGfx.FlashAppearMote : MyGfx.FlashDisappearMote;
-        if (thingDef == null)
-        {
-            return;
-        }
-
-        var moteThrown = (MoteThrown)ThingMaker.MakeThing(thingDef);
-        moteThrown.exactPosition = building.DrawPos;
-        moteThrown.exactRotation = Rand.Range(0, 359);
-        moteThrown.rotationRate = 15f;
-        GenSpawn.Spawn(moteThrown, position, map);
-    }
-
-    public static void ThrowTpSpotSpiralMote(this Comp_LTF_TpSpot comp)
-    {
-        var building = comp.building;
-        if (building.Negligeable())
-        {
-            return;
-        }
-
-        var map = building.Map;
-        var position = building.Position;
-        if (impossibleMote(map, position))
-        {
-            return;
-        }
-
-        var thingDef = comp.SpiralMote();
-        if (thingDef == null)
-        {
-            return;
-        }
-
-        var moteThrown = (MoteThrown)ThingMaker.MakeThing(thingDef);
-        moteThrown.exactPosition = building.DrawPos;
-        moteThrown.exactRotation = Rand.Range(0, 359);
-        moteThrown.rotationRate = 60f;
-        GenSpawn.Spawn(moteThrown, position, map);
-    }
-
     private static float updateOpacity(Thing thing, OpacityWay opacityWay = OpacityWay.no, float opacity = 1f,
         bool debug = false)
     {
@@ -259,5 +153,114 @@ public static class Gfx
         }
 
         return num4;
+    }
+
+    extension(Comp_LTF_TpSpot comp)
+    {
+        public Thing ThrowTpSpotEllipseMote()
+        {
+            var building = comp.building;
+            if (building.Negligeable())
+            {
+                return null;
+            }
+
+            var map = building.Map;
+            var position = building.Position;
+            if (impossibleMote(map, position))
+            {
+                return null;
+            }
+
+            var thingDef = comp.EllipseMote();
+            if (thingDef == null)
+            {
+                return null;
+            }
+
+            var moteThrown = (MoteThrown)ThingMaker.MakeThing(thingDef);
+            moteThrown.exactPosition = building.DrawPos;
+            if (comp.IsIn)
+            {
+                moteThrown.exactPosition.z += 0.75f;
+                moteThrown.SetVelocity(Vector3.down.AngleFlat(), -0.6f);
+                moteThrown.Scale = 1.5f;
+            }
+            else if (comp.IsOut)
+            {
+                moteThrown.SetVelocity(Vector3.up.AngleFlat(), 0.6f);
+                moteThrown.Scale = 0.65f;
+            }
+            else if (comp.IsSwap)
+            {
+                if (Rand.Chance(0.5f))
+                {
+                    moteThrown.exactPosition.z += 0.75f;
+                    moteThrown.SetVelocity(Vector3.down.AngleFlat(), -0.6f);
+                }
+                else
+                {
+                    moteThrown.SetVelocity(Vector3.up.AngleFlat(), 0.6f);
+                }
+            }
+
+            return GenSpawn.Spawn(moteThrown, position, map);
+        }
+
+        public void ThrowTpSpotFlashMote(bool appear = true)
+        {
+            var building = comp.building;
+            if (building.Negligeable())
+            {
+                return;
+            }
+
+            var map = building.Map;
+            var position = building.Position;
+            if (impossibleMote(map, position))
+            {
+                return;
+            }
+
+            var thingDef = appear ? MyGfx.FlashAppearMote : MyGfx.FlashDisappearMote;
+            if (thingDef == null)
+            {
+                return;
+            }
+
+            var moteThrown = (MoteThrown)ThingMaker.MakeThing(thingDef);
+            moteThrown.exactPosition = building.DrawPos;
+            moteThrown.exactRotation = Rand.Range(0, 359);
+            moteThrown.rotationRate = 15f;
+            GenSpawn.Spawn(moteThrown, position, map);
+        }
+
+        public void ThrowTpSpotSpiralMote()
+        {
+            var building = comp.building;
+            if (building.Negligeable())
+            {
+                return;
+            }
+
+            var map = building.Map;
+            var position = building.Position;
+            if (impossibleMote(map, position))
+            {
+                return;
+            }
+
+            var thingDef = comp.SpiralMote();
+            if (thingDef == null)
+            {
+                return;
+            }
+
+            var moteThrown = (MoteThrown)ThingMaker.MakeThing(thingDef);
+            moteThrown.exactPosition = building.DrawPos;
+            moteThrown.exactRotation = Rand.Range(0, 359);
+            moteThrown.rotationRate = 60f;
+            GenSpawn.Spawn(moteThrown, position, map);
+        }
     }
 }

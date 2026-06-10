@@ -58,26 +58,6 @@ public static class MyGfx
 
     public static readonly ThingDef FlashDisappearMote = ThingDef.Named("LTF_Teleport_Mote_FlashDisappear");
 
-    public static ThingDef EllipseMote(this Comp_LTF_TpSpot comp)
-    {
-        if (comp.WParams == null || !comp.HasSetWay)
-        {
-            return null;
-        }
-
-        return EllipseMoteList[(int)comp.WParams.myWay];
-    }
-
-    public static ThingDef SpiralMote(this Comp_LTF_TpSpot comp)
-    {
-        if (comp.WParams == null || !comp.HasSetWay)
-        {
-            return null;
-        }
-
-        return SpiralMoteList[(int)comp.WParams.myWay];
-    }
-
     public static Material Status2WarningMaterial(Comp_LTF_TpSpot comp, bool debug = false)
     {
         var empty = string.Empty;
@@ -164,5 +144,28 @@ public static class MyGfx
         }
 
         return material;
+    }
+
+    extension(Comp_LTF_TpSpot comp)
+    {
+        public ThingDef EllipseMote()
+        {
+            if (comp.WParams == null || !comp.HasSetWay)
+            {
+                return null;
+            }
+
+            return EllipseMoteList[(int)comp.WParams.myWay];
+        }
+
+        public ThingDef SpiralMote()
+        {
+            if (comp.WParams == null || !comp.HasSetWay)
+            {
+                return null;
+            }
+
+            return SpiralMoteList[(int)comp.WParams.myWay];
+        }
     }
 }

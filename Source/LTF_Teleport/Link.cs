@@ -17,24 +17,27 @@ public static class Link
         return (int)val >= num && (int)val <= num2;
     }
 
-    private static LinkOptions NextLink(this LinkOptions link)
+    extension(LinkOptions link)
     {
-        return link != LinkOptions.Linked ? LinkOptions.Linked : LinkOptions.Orphan;
-    }
-
-    public static string LinkNaming(this LinkOptions link)
-    {
-        return !ValidLink(link) ? "link labeling outbound" : link.DescriptionAttr();
-    }
-
-    public static void NextLinkNaming(this LinkOptions link)
-    {
-        var linkOptions = link.NextLink();
-        if (!ValidLink(linkOptions))
+        private LinkOptions NextLink()
         {
-            return;
+            return link != LinkOptions.Linked ? LinkOptions.Linked : LinkOptions.Orphan;
         }
 
-        linkOptions.LinkNaming();
+        public string LinkNaming()
+        {
+            return !ValidLink(link) ? "link labeling outbound" : link.DescriptionAttr();
+        }
+
+        public void NextLinkNaming()
+        {
+            var linkOptions = link.NextLink();
+            if (!ValidLink(linkOptions))
+            {
+                return;
+            }
+
+            linkOptions.LinkNaming();
+        }
     }
 }

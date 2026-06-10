@@ -356,7 +356,7 @@ public class TpSpot : IExposable
         }
     }
 
-    private void FacilityDependantCapacities(Comp_LTF_TpSpot compSpot, bool debug = false)
+    private void FacilityDependantCapacities(Comp_LTF_TpSpot compSpot)
     {
         baseStats.SetBenchSynergy(compSpot);
         baseStats.SetRange(compSpot, compQuality);

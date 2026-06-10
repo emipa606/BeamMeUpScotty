@@ -3,4 +3,33 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="LTF_Teleport/LTF_Teleport.csproj" />
+  <Folder Name="/.github/">
+    <File Path="../.github/copilot-instructions.md" />
+  </Folder>
+  <Folder Name="/XML/1.6/Defs/SoundDefs/">
+    <File Path="../1.6/Defs/SoundDefs/TpSpotSound.xml" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/1.6/Defs/ResearchProjectDefs/">
+    <File Path="../1.6/Defs/ResearchProjectDefs/LTF_Teleporter_Research.xml" />
+    <File Path="../1.6/Defs/ResearchProjectDefs/LTF_Teleporter_ResearchTabs.xml" />
+  </Folder>
+  <Folder Name="/XML/Languages/English/Keyed/">
+    <File Path="../Languages/English/Keyed/Text.xml" />
+  </Folder>
+  <Folder Name="/XML/1.6/Defs/MoteDefs/">
+    <File Path="../1.6/Defs/MoteDefs/EllipseMotes.xml" />
+    <File Path="../1.6/Defs/MoteDefs/FlashMotes.xml" />
+    <File Path="../1.6/Defs/MoteDefs/SpiralMotes.xml" />
+  </Folder>
+  <Folder Name="/XML/1.6/Defs/ThingDefs/">
+    <File Path="../1.6/Defs/ThingDefs/Building_MiniStation.xml" />
+    <File Path="../1.6/Defs/ThingDefs/Building_TpBed.xml" />
+    <File Path="../1.6/Defs/ThingDefs/Building_TpBench.xml" />
+    <File Path="../1.6/Defs/ThingDefs/Building_TpBox.xml" />
+    <File Path="../1.6/Defs/ThingDefs/Building_TpCatcher.xml" />
+    <File Path="../1.6/Defs/ThingDefs/Building_TpSpot.xml" />
+  </Folder>
 </Solution>
