@@ -103,6 +103,7 @@
     <building>
       <bed_showSleeperBody>False</bed_showSleeperBody>
       <bed_healPerDay>4</bed_healPerDay>
+      <bed_countsForBedroomOrBarracks>false</bed_countsForBedroomOrBarracks>
     </building>
     <tickerType>Normal</tickerType>
     <fillPercent>0.4</fillPercent>
