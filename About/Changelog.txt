@@ -1,5 +1,8 @@
 # Changelog for BeamMeUpScotty
 
+1.6.2 - Dont count the teleportation bed as a normal bedroom bed, thanks zachinglis
+
+
 1.6.1 - Teleporters should not stop working after one use
 Used DeepL to update translations for ChineseSimplified
 
