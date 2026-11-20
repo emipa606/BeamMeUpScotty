@@ -1,5 +1,8 @@
 # Changelog for BeamMeUpScotty
 
+1.7.0 - Mod updated for 1.7 and passed autotests
+
+
 1.6.2 - Dont count the teleportation bed as a normal bedroom bed, thanks zachinglis
 
 

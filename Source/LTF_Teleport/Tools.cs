@@ -118,8 +118,8 @@ public static class Tools
 
     public static string DescriptionAttr<T>(this T source)
     {
-        var field = source.GetType().GetField(source.ToString());
-        var array = (DescriptionAttribute[])field.GetCustomAttributes(typeof(DescriptionAttribute), false);
-        return array.Length != 0 ? array[0].description : source.ToString();
+        var field = source.GetType().GetField(source.ToString()!);
+        var array = (DescriptionAttribute[])field?.GetCustomAttributes(typeof(DescriptionAttribute), false);
+        return array is not { Length: 0 } ? array?[0].description : source.ToString();
     }
 }

@@ -20,6 +20,18 @@ public class Comp_LTF_TpSpot : ThingComp
     private readonly int TicksTpSequenceBeginBase = 20;
     private int BeginSequenceFrameLength = 120;
 
+    private int FrameSlower;
+
+    private bool Hax;
+
+    private Gfx.AnimStep TeleportItemAnimStatus = Gfx.AnimStep.na;
+
+    private int TicksNotShowingAlerts;
+
+    private int TicksTpSequenceActive;
+
+    private int TicksTpSequenceBegin;
+
     private int beginSequenceI;
     public Building building;
 
@@ -33,11 +45,7 @@ public class Comp_LTF_TpSpot : ThingComp
 
     private Thing ellipseMote;
 
-    private int FrameSlower;
-
     private bool gfxDebug;
-
-    private bool Hax;
 
     public string myDefName = string.Empty;
 
@@ -48,14 +56,6 @@ public class Comp_LTF_TpSpot : ThingComp
     public bool prcDebug;
 
     public bool slideShowOn;
-
-    private Gfx.AnimStep TeleportItemAnimStatus = Gfx.AnimStep.na;
-
-    private int TicksNotShowingAlerts;
-
-    private int TicksTpSequenceActive;
-
-    private int TicksTpSequenceBegin;
 
     public TpSpot tpSpot;
 
@@ -134,11 +134,17 @@ public class Comp_LTF_TpSpot : ThingComp
             {
                 text = text + Tools.OkStr(this.TeleportOrder()) +
                        (this.TeleportOrder() ? "BmuS.Roger".Translate() : "BmuS.SayWhat".Translate());
-                text += this.HasNothing()
-                    ? "BmuS.Nothing".Translate()
-                    : RegisteredCount > 1
+                if (this.HasNothing())
+                {
+                    text += "BmuS.Nothing".Translate();
+                }
+                else
+                {
+                    text += RegisteredCount > 1
                         ? "BmuS.ItemsKg".Translate(RegisteredCount, Tools.CapacityString(CurrentWeight, WeightCapacity))
                         : "BmuS.ItemKg".Translate(RegisteredCount, Tools.CapacityString(CurrentWeight, WeightCapacity));
+                }
+
                 if (this.TeleportOrder() && this.HasWarmUp())
                 {
                     text +=
@@ -331,7 +337,7 @@ public class Comp_LTF_TpSpot : ThingComp
         BeginTeleportItemAnimSeq();
     }
 
-    private void TeleportItem(Thing thing, IntVec3 destination, Map destinationMap, bool debug = false)
+    private static void TeleportItem(Thing thing, IntVec3 destination, Map destinationMap, bool debug = false)
     {
         if (thing == null)
         {

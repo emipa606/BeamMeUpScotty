@@ -22,14 +22,6 @@ public static class Gfx
         under = -1
     }
 
-    public enum OpacityWay
-    {
-        no,
-        forced,
-        pulse,
-        loop
-    }
-
     private static bool impossibleMote(Map map, IntVec3 cell)
     {
         if (map == null || !cell.IsValid)
@@ -262,5 +254,13 @@ public static class Gfx
             moteThrown.rotationRate = 60f;
             GenSpawn.Spawn(moteThrown, position, map);
         }
+    }
+
+    private enum OpacityWay
+    {
+        no,
+        forced,
+        pulse,
+        loop
     }
 }

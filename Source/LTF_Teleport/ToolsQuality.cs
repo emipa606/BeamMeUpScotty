@@ -4,7 +4,7 @@ using Verse;
 
 namespace LTF_Teleport;
 
-public class ToolsQuality
+public static class ToolsQuality
 {
     public static string VirtualQuality(CompQuality comp, int relativeChange = 0)
     {

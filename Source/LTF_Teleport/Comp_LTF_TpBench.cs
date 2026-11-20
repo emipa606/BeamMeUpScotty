@@ -13,18 +13,18 @@ public class Comp_LTF_TpBench : ThingComp
     public readonly bool prcDebug = false;
     public int FacilityCapacity;
 
-    public bool gfxDebug = false;
-
     public int GizmoIndex;
 
     public bool Hax = false;
 
+    public List<Building> Registry = [];
+    public string TpSpotName = string.Empty;
+
+    public bool gfxDebug = false;
+
     public float moreRange;
 
     private float range;
-
-    public List<Building> Registry = [];
-    public string TpSpotName = string.Empty;
 
     private Building building => (Building)parent;
 

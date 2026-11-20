@@ -70,16 +70,14 @@ public static class Status
 
             switch (compSpot.WParams.myWay)
             {
-                case MyWay.Way.Out:
-                case MyWay.Way.Swap:
+                case MyWay.Way.In:
+                    break;
                 default:
                     if (compSpot.HasNothing())
                     {
                         buildingStatus ^= BuildingStatus.noItem;
                     }
 
-                    break;
-                case MyWay.Way.In:
                     break;
             }
 
@@ -171,7 +169,7 @@ public static class Status
 
             noSpot &= compSpot.IsLinked();
             noSpot &= compSpot.HasNoCooldown();
-            return noSpot & compSpot.SupportsWeight();
+            return noSpot && compSpot.SupportsWeight();
         }
 
         public bool IsLinked()

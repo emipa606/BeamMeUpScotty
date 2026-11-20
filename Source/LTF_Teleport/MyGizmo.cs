@@ -4,7 +4,7 @@ using Verse;
 namespace LTF_Teleport;
 
 [StaticConstructorOnStartup]
-public class MyGizmo
+public static class MyGizmo
 {
     private static readonly string GizmoPath = "UI/Commands/";
 

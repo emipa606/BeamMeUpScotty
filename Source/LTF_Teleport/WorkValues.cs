@@ -202,7 +202,7 @@ public class WorkValues : IExposable
     {
         var removeItemsIfAbsent = false;
         removeItemsIfAbsent |= RemoveItemsIfAbsent(building);
-        return removeItemsIfAbsent | AddSpotItems(building);
+        return removeItemsIfAbsent || AddSpotItems(building);
     }
 
     private bool AddSpotItems(Building building, bool debug = false)
